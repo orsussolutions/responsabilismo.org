@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+#logo {
+   
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+.slogan {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.columnas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    flex: 1; /* Hace que las columnas ocupen el espacio disponible */
+}
+
+.columnas article {
+    background-color: #f3f3f3;
+    margin: 10px;
+    padding: 50px;
+    text-align: center;
+    flex: 1 0 calc(33% - 60px); /* ajusta según el margen/padding */
+    box-sizing: border-box;
+}
+
+.columnas article p {
+
+    text-align: left;
+  
+}
+.columnas article a {
+    text-decoration: none;
+    display: flex; /* Cambiado de inline-block a flex */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    outline: 0;
+    cursor: pointer;
+    padding: 0px 16px;
+    border-radius: 2px;
+    width: 80px;
+    height: 32px;
+    background-color: rgb(0, 120, 212);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 400;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 120, 212);
+    margin: auto;
+ 
+}
+ 
+
+
+.columnas article a:hover {
+    background-color: rgb(16, 110, 190);
+    border: 1px solid rgb(16, 110, 190);
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .columnas article {
+        flex-basis: calc(50% - 20px); /* 2 artículos por fila en pantallas más pequeñas */
+    }
+    }
+
+
+@media (max-width: 600px) {
+    .columnas article {
+        flex-basis: calc(100% - 20px); /* 1 artículo por fila en pantallas muy pequeñas */
+    }
+
+    #logo {
+        max-width: 300px;
+    }
+}
